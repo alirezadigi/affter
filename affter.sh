@@ -23,12 +23,9 @@ sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo a
 sudo echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update -y
 sudo apt-get install google-chrome-stable -y
-sudo apt install apt-transport-https -y
-sudo wget -O - https://repo.jellyfin.org/jellyfin_team.gpg.key | sudo apt-key add -
-sudo echo "deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/$( awk -F'=' '/^ID=/{ print $NF }' /etc/os-release ) $( awk -F'=' '/^VERSION_CODENAME=/{ print $NF }' /etc/os-release ) main" | sudo tee /etc/apt/sources.list.d/jellyfin.list
-sudo apt update -y
-sudo apt install jellyfin -y
-
+sudo apt install flatpak -y
+sudo flatpak install flathub com.github.iwalton3.jellyfin-media-player -y
+sudo flatpak install flathub org.telegram.desktop
 
 
 
