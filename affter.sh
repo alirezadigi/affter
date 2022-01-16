@@ -26,11 +26,11 @@ sudo apt-get install google-chrome-stable -y
 sudo apt install flatpak -y
 sudo flatpak install flathub com.github.iwalton3.jellyfin-media-player -y
 sudo flatpak install flathub org.telegram.desktop
-flatpak install flathub com.hamrick.VueScan
-flatpak install flathub io.github.seadve.Kooha
-flatpak install flathub com.discordapp.Discord
-flatpak install flathub com.obsproject.Studio
-flatpak install flathub com.visualstudio.code
+sudo flatpak install flathub com.hamrick.VueScan
+sudo flatpak install flathub io.github.seadve.Kooha
+sudo flatpak install flathub com.discordapp.Discord
+sudo flatpak install flathub com.obsproject.Studio
+sudo flatpak install flathub com.visualstudio.code
 
 
 pip3 install howdoi requests tinydb flask
