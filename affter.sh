@@ -19,6 +19,12 @@ sudo apt install bat -y
 sudo apt install stacer -y
 sudo apt install iftop -y
 sudo apt install p7zip-full -y
+sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+sudo apt-get update -y
+sudo apt-get install google-chrome-stable -y
+
+
 
 pip3 install howdoi requests tinydb flask
 pip3 install bpytop
