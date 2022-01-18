@@ -26,7 +26,7 @@ sudo apt-get install google-chrome-stable -y
 sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub com.github.iwalton3.jellyfin-media-player -y
-sudo flatpak install flathub org.telegram.desktop
+sudo snap install --edge telegram-desktop
 sudo flatpak install flathub com.hamrick.VueScan
 sudo flatpak install flathub io.github.seadve.Kooha
 sudo flatpak install flathub com.discordapp.Discord
