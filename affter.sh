@@ -24,6 +24,7 @@ sudo echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' 
 sudo apt-get update -y
 sudo apt-get install google-chrome-stable -y
 sudo apt install flatpak -y
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub com.github.iwalton3.jellyfin-media-player -y
 sudo flatpak install flathub org.telegram.desktop
 sudo flatpak install flathub com.hamrick.VueScan
