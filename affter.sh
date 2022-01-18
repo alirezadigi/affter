@@ -23,15 +23,10 @@ sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo a
 sudo echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update -y
 sudo apt-get install google-chrome-stable -y
-sudo apt install flatpak -y
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install flathub com.github.iwalton3.jellyfin-media-player -y
-sudo snap install --edge telegram-desktop
-sudo flatpak install flathub com.hamrick.VueScan
-sudo flatpak install flathub io.github.seadve.Kooha
-sudo flatpak install flathub com.discordapp.Discord
-sudo flatpak install flathub com.obsproject.Studio
-sudo flatpak install flathub com.visualstudio.code
+sudo add-apt-repository ppa:atareao/telegram -y
+sudo apt update -y
+sudo apt install telegram -y
+
 
 
 pip3 install howdoi requests tinydb flask
