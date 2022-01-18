@@ -29,7 +29,7 @@ sudo apt install telegram -y
 
 
 
-pip3 install howdoi requests tinydb flask
+pip3 install howdoi requests tinydb flask kaggle
 pip3 install bpytop jupyter notebook
 sudo apt install jupyter-notebook
 sudo apt install jupyter-core
