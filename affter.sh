@@ -22,6 +22,9 @@ sudo apt install bat -y
 sudo apt install stacer -y
 sudo apt install iftop -y
 sudo apt install p7zip-full -y
+sudo apt-get install virtualbox -y
+sudo apt-get install krusader -y
+sudo apt-get install virtualbox—ext–pack -y
 sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update -y
@@ -54,10 +57,23 @@ rm /tmp/icon.png
 rm /tmp/telegram.desktop
 rm -R /tmp/Telegram
 
+
+
+cd /tmp
+git clone https://github.com/mriza/winbox-installer.git
+cd winbox-installer
+sudo ./winbox-setup install
+
+
+
+
 curl --silent "https://api.github.com/repos/SagerNet/sing-box/releases" | jq -r | grep _linux_amd64 | head | grep ".*_linux_amd64.deb" | cut -d : -f 2,3 | tr -d \" | wget -O sing-box_linux_amd64.deb -i  -
 sudo dpkg -i sing-box_linux_amd64.deb
 
+curl --silent "https://api.github.com/repos/VSCodium/vscodium/releases" | jq -r | grep ".*amd64.deb" | head | grep ".*amd64.deb" | cut -d : -f 2,3 | tr -d \" | wget -O VSCodium.deb -i  -
+sudo dpkg -i VSCodium.deb
+
 pip3 install howdoi requests tinydb flask kaggle
 pip3 install bpytop jupyter notebook
-sudo apt install jupyter-notebook
-sudo apt install jupyter-core
+sudo apt install jupyter-notebook -y
+sudo apt install jupyter-core -y
