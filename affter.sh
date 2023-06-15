@@ -73,7 +73,7 @@ sudo dpkg -i sing-box_linux_amd64.deb
 curl --silent "https://api.github.com/repos/VSCodium/vscodium/releases" | jq -r | grep ".*amd64.deb" | head | grep ".*amd64.deb" | cut -d : -f 2,3 | tr -d \" | wget -O VSCodium.deb -i  -
 sudo dpkg -i VSCodium.deb
 
-pip3 install howdoi requests tinydb flask kaggle
-pip3 install bpytop jupyter notebook
+pip3 install howdoi requests tinydb flask kaggle --break-system-packages
+pip3 install bpytop jupyter notebook --break-system-packages
 sudo apt install jupyter-notebook -y
 sudo apt install jupyter-core -y
